@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/lib/products";
+import ProductImageGallery from "@/app/components/ProductImageGallery";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
   const product = getProductBySlug(id);
   if (!product) return {};
   return {
-    title: `${product.shortName} | Virgin Megastore UAE`,
+    title: `${product.shortName} | Jumbo Electronics UAE`,
     description: product.description,
   };
 }
@@ -46,29 +47,7 @@ export default async function ProductPage({ params }: Props) {
 
         {/* Left: images */}
         <div>
-          <div style={{
-            background: "#f8f8f8", border: "1px solid #e5e5e5",
-            borderRadius: "12px", overflow: "hidden",
-            aspectRatio: "4/3", marginBottom: "12px",
-          }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={product.images[0]} alt={product.shortName}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-          </div>
-          <div style={{ display: "flex", gap: "10px" }}>
-            {product.images.map((img, i) => (
-              <div key={i} style={{
-                background: "#f8f8f8",
-                border: `2px solid ${i === 0 ? "#e4002b" : "#e5e5e5"}`,
-                borderRadius: "8px", overflow: "hidden",
-                width: "80px", height: "60px", cursor: "pointer", flexShrink: 0,
-              }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img} alt={`View ${i + 1}`}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              </div>
-            ))}
-          </div>
+          <ProductImageGallery images={product.images} altName={product.shortName} />
         </div>
 
         {/* Right: info */}
@@ -77,7 +56,7 @@ export default async function ProductPage({ params }: Props) {
           <div style={{ display: "flex", gap: "8px", marginBottom: "14px", flexWrap: "wrap" }}>
             {product.badge && (
               <span style={{
-                background: product.badge === "Sale" ? "#ff6b00" : "#e4002b",
+                background: product.badge === "Sale" ? "#ff6b00" : "#F05A00",
                 color: "#fff", fontSize: "11px", fontWeight: 700,
                 padding: "3px 10px", borderRadius: "4px", letterSpacing: "0.05em",
               }}>{product.badge}</span>
@@ -150,7 +129,7 @@ export default async function ProductPage({ params }: Props) {
           {/* CTA buttons */}
           <div style={{ display: "flex", gap: "10px", marginBottom: "28px" }}>
             <button style={{
-              flex: 1, background: "#e4002b", color: "#fff",
+              flex: 1, background: "#F05A00", color: "#fff",
               border: "none", borderRadius: "8px",
               padding: "14px", fontSize: "15px",
               fontWeight: 700, cursor: "pointer",
@@ -229,7 +208,7 @@ export default async function ProductPage({ params }: Props) {
                   borderRadius: "50%", display: "flex",
                   alignItems: "center", justifyContent: "center", marginTop: "1px",
                 }}>
-                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#e4002b" strokeWidth="3">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F05A00" strokeWidth="3">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
@@ -244,7 +223,7 @@ export default async function ProductPage({ params }: Props) {
       <div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
           <h2 style={{ color: "#111", fontWeight: 800, fontSize: "20px" }}>You Might Also Like</h2>
-          <Link href="/" style={{ color: "#e4002b", textDecoration: "none", fontSize: "13px", fontWeight: 600 }}>
+          <Link href="/" style={{ color: "#F05A00", textDecoration: "none", fontSize: "13px", fontWeight: 600 }}>
             View All Gaming Desktops →
           </Link>
         </div>

@@ -23,7 +23,7 @@ export default function HomePage() {
 
       {/* Hero banner */}
       <div style={{
-        background: "linear-gradient(135deg, #e4002b 0%, #a50020 100%)",
+        background: "linear-gradient(135deg, #F05A00 0%, #c44800 100%)",
         borderRadius: "12px",
         padding: "36px 48px",
         marginBottom: "28px",
@@ -54,7 +54,7 @@ export default function HomePage() {
             }}>
               AZTECH
             </div>
-            <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "13px" }}>× VIRGIN MEGASTORE UAE</span>
+            <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "13px" }}>× JUMBO ELECTRONICS UAE</span>
           </div>
           <h1 style={{ fontSize: "34px", fontWeight: 900, color: "#fff", margin: 0, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
             CUSTOM GAMING DESKTOPS
@@ -99,9 +99,9 @@ export default function HomePage() {
           <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
             {GPU_FILTERS.slice(0, 8).map((f, i) => (
               <span key={f} style={{
-                background: i === 0 ? "#e4002b" : "#f5f5f5",
+                background: i === 0 ? "#F05A00" : "#f5f5f5",
                 color: i === 0 ? "#fff" : "#555",
-                border: `1px solid ${i === 0 ? "#e4002b" : "#e5e5e5"}`,
+                border: `1px solid ${i === 0 ? "#F05A00" : "#e5e5e5"}`,
                 borderRadius: "20px", padding: "4px 12px",
                 fontSize: "12px", cursor: "pointer",
                 fontWeight: i === 0 ? 600 : 400,
@@ -151,7 +151,7 @@ export default function HomePage() {
           AZTECH is a UAE gaming brand built by gamers, for the GCC community. Every pre-built system is individually
           assembled with precision, stress-tested, and shipped ready to game. Components are sourced from ASUS, NVIDIA,
           AMD, Lian Li, DeepCool, and more — ensuring a machine that performs as good as it looks. Available exclusively
-          through Virgin Megastore UAE with a full 1-year warranty and 0% interest financing.
+          through Jumbo Electronics UAE with a full 1-year warranty and 0% interest financing.
         </p>
       </div>
     </main>

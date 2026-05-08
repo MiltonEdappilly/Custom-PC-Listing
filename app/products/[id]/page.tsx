@@ -56,7 +56,7 @@ export default async function ProductPage({ params }: Props) {
           <div style={{ display: "flex", gap: "8px", marginBottom: "14px", flexWrap: "wrap" }}>
             {product.badge && (
               <span style={{
-                background: product.badge === "Sale" ? "#ff6b00" : "#F05A00",
+                background: product.badge === "Sale" ? "#ff6b00" : "#1B4289",
                 color: "#fff", fontSize: "11px", fontWeight: 700,
                 padding: "3px 10px", borderRadius: "4px", letterSpacing: "0.05em",
               }}>{product.badge}</span>
@@ -129,7 +129,7 @@ export default async function ProductPage({ params }: Props) {
           {/* CTA buttons */}
           <div style={{ display: "flex", gap: "10px", marginBottom: "28px" }}>
             <button style={{
-              flex: 1, background: "#F05A00", color: "#fff",
+              flex: 1, background: "#1B4289", color: "#fff",
               border: "none", borderRadius: "8px",
               padding: "14px", fontSize: "15px",
               fontWeight: 700, cursor: "pointer",
@@ -208,7 +208,7 @@ export default async function ProductPage({ params }: Props) {
                   borderRadius: "50%", display: "flex",
                   alignItems: "center", justifyContent: "center", marginTop: "1px",
                 }}>
-                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F05A00" strokeWidth="3">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1B4289" strokeWidth="3">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
@@ -223,7 +223,7 @@ export default async function ProductPage({ params }: Props) {
       <div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
           <h2 style={{ color: "#111", fontWeight: 800, fontSize: "20px" }}>You Might Also Like</h2>
-          <Link href="/" style={{ color: "#F05A00", textDecoration: "none", fontSize: "13px", fontWeight: 600 }}>
+          <Link href="/" style={{ color: "#1B4289", textDecoration: "none", fontSize: "13px", fontWeight: 600 }}>
             View All Gaming Desktops →
           </Link>
         </div>

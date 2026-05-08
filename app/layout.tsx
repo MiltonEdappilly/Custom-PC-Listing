@@ -7,32 +7,47 @@ export const metadata: Metadata = {
     "Shop AZTECH custom pre-built gaming desktops at Jumbo Electronics UAE. RTX 5080, RTX 5070 Ti, RTX 4080 SUPER and more. Free delivery over 200 AED.",
 };
 
-/** Jumbo Electronics UAE brand SVG logo (wordmark) */
+/** Jumbo Electronics UAE brand SVG logo */
 function JumboLogo({ size = 32 }: { size?: number }) {
+  const h = size;
+  const w = size * 5.2;
   return (
     <svg
-      width={size * 3.6}
-      height={size}
-      viewBox="0 0 144 40"
+      width={w}
+      height={h}
+      viewBox="0 0 208 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Jumbo Electronics"
     >
-      {/* Orange rectangle background */}
-      <rect width="144" height="40" rx="4" fill="#F05A00" />
-      {/* "jumbo" wordmark in white */}
+      {/* JUMBO wordmark */}
       <text
-        x="72"
-        y="28"
-        textAnchor="middle"
-        fontFamily="'Inter', Arial, sans-serif"
-        fontWeight="800"
-        fontSize="22"
+        x="0"
+        y="31"
+        fontFamily="'Arial Black', 'Arial', sans-serif"
+        fontWeight="900"
+        fontSize="34"
         letterSpacing="1"
-        fill="#ffffff"
+        fill="#1B4289"
       >
-        jumbo
+        JUMBO
       </text>
+      {/* Stylised JL icon — two mirrored pillars on a diamond base */}
+      <g transform="translate(162, 0)" fill="#1B4289">
+        {/* Left pillar */}
+        <rect x="0" y="0" width="10" height="26" rx="2" />
+        <rect x="0" y="22" width="18" height="4" rx="1" />
+        {/* Right pillar */}
+        <rect x="26" y="0" width="10" height="26" rx="2" />
+        <rect x="18" y="22" width="18" height="4" rx="1" />
+        {/* Diamond base */}
+        <polygon points="18,28 36,34 18,40 0,34" />
+        {/* Inner lines on pillars */}
+        <rect x="3" y="2" width="2" height="22" rx="1" fill="white" opacity="0.35" />
+        <rect x="7" y="2" width="1" height="22" rx="0.5" fill="white" opacity="0.25" />
+        <rect x="31" y="2" width="2" height="22" rx="1" fill="white" opacity="0.35" />
+        <rect x="28" y="2" width="1" height="22" rx="0.5" fill="white" opacity="0.25" />
+      </g>
     </svg>
   );
 }
@@ -56,7 +71,7 @@ export default function RootLayout({
 
         {/* Top announcement bar — Jumbo orange */}
         <div style={{
-          background: "#F05A00",
+          background: "#1B4289",
           color: "#fff",
           textAlign: "center",
           padding: "8px 24px",
@@ -129,7 +144,7 @@ export default function RootLayout({
                   </svg>
                   <span style={{
                     position: "absolute", top: "-6px", right: "-6px",
-                    background: "#F05A00", color: "#fff", borderRadius: "50%",
+                    background: "#1B4289", color: "#fff", borderRadius: "50%",
                     width: "16px", height: "16px", fontSize: "10px",
                     display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700,
                   }}>0</span>

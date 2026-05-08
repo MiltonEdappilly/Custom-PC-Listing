@@ -23,7 +23,7 @@ export default function HomePage() {
 
       {/* Hero banner */}
       <div style={{
-        background: "linear-gradient(135deg, #F05A00 0%, #c44800 100%)",
+        background: "linear-gradient(135deg, #1B4289 0%, #142f6b 100%)",
         borderRadius: "12px",
         padding: "36px 48px",
         marginBottom: "28px",
@@ -99,9 +99,9 @@ export default function HomePage() {
           <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
             {GPU_FILTERS.slice(0, 8).map((f, i) => (
               <span key={f} style={{
-                background: i === 0 ? "#F05A00" : "#f5f5f5",
+                background: i === 0 ? "#1B4289" : "#f5f5f5",
                 color: i === 0 ? "#fff" : "#555",
-                border: `1px solid ${i === 0 ? "#F05A00" : "#e5e5e5"}`,
+                border: `1px solid ${i === 0 ? "#1B4289" : "#e5e5e5"}`,
                 borderRadius: "20px", padding: "4px 12px",
                 fontSize: "12px", cursor: "pointer",
                 fontWeight: i === 0 ? 600 : 400,

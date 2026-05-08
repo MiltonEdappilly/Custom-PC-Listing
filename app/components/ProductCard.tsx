@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { Product } from "@/lib/products";
 
-const JUMBO_ORANGE = "#F05A00";
+const JUMBO_BLUE = "#1B4289";
 const FALLBACK_IMG = "https://placehold.co/600x450/f0f0f0/999999?text=AZTECH+Gaming+PC";
 
 interface Props {
@@ -25,13 +25,13 @@ export default function ProductCard({ product }: Props) {
         onMouseLeave={() => setHovered(false)}
         style={{
           background: "#ffffff",
-          border: `1px solid ${hovered ? JUMBO_ORANGE : "#e5e5e5"}`,
+          border: `1px solid ${hovered ? JUMBO_BLUE : "#e5e5e5"}`,
           borderRadius: "10px",
           overflow: "hidden",
           cursor: "pointer",
           transform: hovered ? "translateY(-3px)" : "translateY(0)",
           boxShadow: hovered
-            ? "0 8px 24px rgba(240,90,0,0.14)"
+            ? "0 8px 24px rgba(27,66,137,0.14)"
             : "0 1px 4px rgba(0,0,0,0.06)",
           transition: "all 0.2s ease",
           height: "100%",
@@ -44,7 +44,7 @@ export default function ProductCard({ product }: Props) {
           {product.badge && (
             <div style={{
               position: "absolute", top: "10px", left: "10px", zIndex: 10,
-              background: product.badge === "Sale" ? "#e65c00" : JUMBO_ORANGE,
+              background: product.badge === "Sale" ? "#c0392b" : JUMBO_BLUE,
               color: "#fff", fontSize: "11px", fontWeight: 700,
               padding: "3px 9px", borderRadius: "4px", letterSpacing: "0.05em",
             }}>
@@ -84,8 +84,8 @@ export default function ProductCard({ product }: Props) {
               product.gpu.replace("NVIDIA ", "").replace("GeForce ", ""),
             ].map((spec) => (
               <span key={spec} style={{
-                background: "#fff5f0", border: "1px solid #ffd5b8",
-                color: "#c44d00", fontSize: "11px", padding: "2px 7px",
+                background: "#f0f4ff", border: "1px solid #c5d4f5",
+                color: "#1B4289", fontSize: "11px", padding: "2px 7px",
                 borderRadius: "4px", fontFamily: "monospace",
               }}>
                 {spec}
@@ -150,7 +150,7 @@ export default function ProductCard({ product }: Props) {
                   <span style={{ fontSize: "12px", color: "#bbb", textDecoration: "line-through" }}>
                     AED {product.originalPrice.toLocaleString()}
                   </span>
-                  <span style={{ fontSize: "11px", color: "#e65c00", fontWeight: 600 }}>
+                  <span style={{ fontSize: "11px", color: "#1B4289", fontWeight: 600 }}>
                     Save AED {(product.originalPrice - product.price).toLocaleString()}
                   </span>
                 </div>
@@ -161,7 +161,7 @@ export default function ProductCard({ product }: Props) {
             </div>
             <button
               style={{
-                background: JUMBO_ORANGE, color: "#fff",
+                background: JUMBO_BLUE, color: "#fff",
                 border: "none", borderRadius: "7px",
                 padding: "10px 16px", fontSize: "13px",
                 fontWeight: 700, cursor: "pointer",
